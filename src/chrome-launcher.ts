@@ -209,8 +209,8 @@ class Launcher {
     }
 
     this.userDataDir = this.userDataDir || this.makeTmpDir();
-    this.outFile = this.fs.openSync(`${this.userDataDir}/chrome-out.log`, 'a');
-    this.errFile = this.fs.openSync(`${this.userDataDir}/chrome-err.log`, 'a');
+    // this.outFile = this.fs.openSync(`${this.userDataDir}/chrome-out.log`, 'a');
+    // this.errFile = this.fs.openSync(`${this.userDataDir}/chrome-err.log`, 'a');
 
     this.setBrowserPrefs();
 
@@ -302,7 +302,7 @@ class Launcher {
         // process group, making it possible to kill child process tree with `.kill(-pid)` command.
         // @see https://nodejs.org/api/child_process.html#child_process_options_detached
         detached: process.platform !== 'win32',
-        stdio: ['ignore', this.outFile, this.errFile],
+        // stdio: ['ignore', this.outFile, this.errFile],
         env: this.envVars
       });
 
