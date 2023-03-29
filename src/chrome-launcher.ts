@@ -253,8 +253,8 @@ class Launcher {
       try {
         await this.isDebuggerReady();
         log.log(
-          'ChromeLauncher',
-          `Found existing Chrome already running using port ${this.port}, using that.`);
+            'ChromeLauncher',
+            `Found existing Chrome already running using port ${this.port}, using that.`);
         return;
       } catch (err) {
         log.log(
